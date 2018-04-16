@@ -293,4 +293,6 @@ class FlynTPW_TPWidget extends WP_Widget
         return $instance;
     }
 }
-add_action('widgets_init', create_function('', 'return register_widget("FlynTPW_TPWidget");'));
+add_action('widgets_init', function() {
+    register_widget("FlynTPW_TPWidget");
+});
